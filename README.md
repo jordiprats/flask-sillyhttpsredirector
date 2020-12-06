@@ -1,1 +1,3 @@
-# flask-sillyredirector
+# flask-sillhttpsyredirector
+
+Redirects everything to https

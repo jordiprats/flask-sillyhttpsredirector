@@ -8,4 +8,4 @@ COPY sillyredirector.py .
 
 EXPOSE 9000
 
-CMD [ "python", "./sillyredirector.py" ] 
+CMD [ "python", "./sillyhttpsredirector.py" ] 
