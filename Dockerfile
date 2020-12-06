@@ -4,7 +4,7 @@ WORKDIR /code
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-COPY sillyredirector.py .
+COPY sillyhttpsredirector.py .
 
 EXPOSE 9000
 
