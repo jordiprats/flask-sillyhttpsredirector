@@ -2,11 +2,16 @@ from flask import Flask, redirect, request
 
 app = Flask(__name__)
 
+REDIRECT = os.getenv('REDIRECT', None)
+
 @app.route('/', defaults={'u_path': ''})
 @app.route('/<path:u_path>')
 def catch_all(u_path):
     try:
-        host = request.headers.get('Host')
+        if REDIRECT:
+            host = REDIRECT
+        else:
+            host = request.headers.get('Host')
         return redirect("https://"+host+'/'+u_path, code=301)
     except:
         content = {'not': 'implemented'}
